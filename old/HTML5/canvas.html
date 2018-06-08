@@ -1,0 +1,26 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>HTML5 canvas</title>
+    <style>
+
+    </style>
+    <script src="js/jquery-3.2.1.min.js"></script>
+
+</head>
+
+<body>
+    <canvas id="myCanvas" width="800" height="600"></canvas>
+    <script type="text/javascript">
+        var c = document.getElementById("myCanvas");
+        var cxt = c.getContext("2d");
+
+        //cxt.fillStyle = "#FF0000";
+        cxt.fillRect(50, 50, 100, 100);
+        cxt.clearRect(50, 50, 70, 70);
+        cxt.strokeRect(45, 45, 110, 110);
+    </script>
+</body>
+
+</html>
