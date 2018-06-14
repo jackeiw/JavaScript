@@ -1,0 +1,56 @@
+<html>
+<meta charset="UTF-8" />
+
+<head>
+    <title>jquery脚本加强</title>
+    <script type="text/javascript" src="../lib/jquery.min.js"></script>
+    <script>
+        //window.alert('welcome!');
+        if (!$.support.leadingWhitespace) {
+            alert("yes, f IE6-8!")
+        }
+
+        function ieTester() {
+            if ($.browser) {
+                var brow = $.browser;
+                var bInfo = "";
+                if (brow.msie && brow.version < 9) {
+                    return true;
+                }
+            } else if ($.support) {
+                if (!$.support.leadingWhitespace) {
+                    //alert("yes, f IE6-8!");
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        //ieTester();
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        Header
+    </div>
+    <div class="main">
+        <div class="nav"></div>
+        <div class="content">
+            <h1>test</h1>
+            <p>
+                wlnaoiwdownfiownio
+            </p>
+        </div>
+        <div id="contentdiv">
+
+        </div>
+    </div>
+    <div class="footer">
+        footer
+    </div>
+</body>
+<script>
+</script>
+
+</html>

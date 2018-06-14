@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+     <title></title>
+     <script src="http://localhost/publicweb/Services/resources/jquery/jquery-1.8.3.js" type="text/javascript"></script>
+     <script type="text/javascript">
+         $(function () {
+             $("#btn").click(function () {
+                 $("#dv").slideToggle(200);
+                 setTimeout(function () {
+                     $("#dv").hide(200);
+                 }, 3000);
+             });
+
+         });
+		 
+		 //regex = /(<!--\[Item\]-->)([\s\S]*?)(<!--\[\/Item\]-->)/ig;
+        var str1 = "电视机(20)";
+        var str2 = "数字电视(0)(0)";
+        //var str3 = "移动通讯(315)";
+        var str3 = ">> 北大昆曲传承计划将连演三天折子戏 [][2015-03-18]";
+        function formatStr(s) {
+            var patrn = /[\[]{1}[\s\S]+[\]]{1}$/;//   /[(]{1}[\d]+[)]{1}$/;  // /^/d{4}-/d{1,2}-/d{1,2}$/;  
+            patrn = /[\[]{1}\d{4}-\d{1,2}-\d{1,2}[\]]{1}$/;
+            if (patrn.test(s)) {
+                return s.match(patrn);
+                //return s.replace(patrn, "");
+            }
+        }
+        
+        alert(formatStr(str1));
+        alert(formatStr(str2));
+        alert(formatStr(str3));
+     </script>
+     <style type="text/css">
+         div.RoundedCorner
+         {
+             background: #C8E2FA;
+         }
+         b.rtop, b.rbottom
+         {
+             display: block;
+             background: #FFFFFF;
+         }
+         b.rtop b, b.rbottom b
+         {
+             display: block;
+             height: 1px;
+             overflow: hidden;
+             background: #C8E2FA;
+         }
+         b.r1
+         {
+             margin: 0 5px;
+         }
+         b.r2
+         {
+             margin: 0 3px;
+         }
+         b.r3
+         {
+             margin: 0 2px;
+         }
+         b.rtop b.r4, b.rbottom b.r4
+         {
+             margin: 0 1px;
+             height: 2px;
+         }
+
+         #dv
+         {
+             width: 300px;
+
+             position: absolute;
+             top: 10px;
+             left: 39%;
+             z-index: 10001;
+             padding: 0;
+         }
+         .shade
+         {
+             display: none;
+         }
+     </style>
+ </head>
+ <body>
+     <div id="dv" class="shade">
+         <b class="rtop"><b class="r1"></b><b class="r2"></b><b class="r3"></b><b class="r4">
+         </b></b>
+         <div style=" height:100px; text-align:center; background-color:#C8E2FA;">
+         <br /><br />
+             <div style="height:30px; font-weight: bold; font-size:16px; background-color:#C8E2FA;">
+
+                 修改成功!
+
+             </div>
+         </div>
+          <b class="rbottom"><b class="r4"></b><b class="r3"></b><b class="r2">
+         </b><b class="r1"></b></b>
+     </div>
+     <input type="button" id="btn" value="点击" />
+ </body>
+ </html>

@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>测试sublime功能</title>
+	<script type="text/javascript">
+		window.onload = function autoRun () {
+			//alert('You win!');
+		}
+		
+		
+		<!--
+		function omiga_window(){
+			window.open("ScrollLoad.html","","fullscreen=1,menubar=0,toolbar=0,directories=0,location=0,status=0,scrollbars=0");
+		}
+		//-->
+	</script>	
+</head>
+<body>
+	<iframe frameborder="0" src="ScrollLoad.html" width="100%" height="800" scrolling="no" id="iframepage" onload="iFrameHeight();"></iframe>
+    <!--注释：将高度自适应放到子页面执行，但是会不会出现嵌套其它非本站的页面呢？该怎么解决？onload="iFrameHeight();"-->
+    <script type="text/javascript" language="javascript">
+        function iFrameHeight() {
+            var ifm = document.getElementById("iframepage");
+            var subWeb = document.frames ? document.frames["iframepage"].document : ifm.contentDocument;
+            if (ifm != null && subWeb != null) {
+                ifm.height = subWeb.body.scrollHeight + 20;
+            }
+        }
+
+        //父窗体带动子窗体Scroll
+        window.onscroll = function () {        		
+                setTimeout(function () {
+                    window.frames['iframepage'].scrollLoad._init();
+                }, 1000);
+       }
+    </script>
+	<input value="Open" type="button" onclick="javascript:omiga_window();"/>
+</body>
+</html>

@@ -1,0 +1,1 @@
+new xWin("", "440", "400", "200", "100", "", "WebProductBingFa.aspx?str=" + str + "&bingfatype=" + bingfatype);
