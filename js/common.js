@@ -9,3 +9,8 @@
     window.v = V;
     
 })(window);
+
+function getTimeDiff(){
+    var time = new Date();
+    console.info(time);
+}
