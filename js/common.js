@@ -12,5 +12,5 @@
 
 function getTimeDiff(){
     var time = new Date();
-    console.info(time);
+    console.info(time.getTime());
 }
