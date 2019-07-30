@@ -1,0 +1,473 @@
+<html>
+
+<head>
+    <title>www.lanrentuku.com</title>
+    <meta http-equiv="imagetoolbar" content="no">
+    <style type="text/css">
+        body {
+            cursor: crosshair;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            overflow: hidden;
+            background: #000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .obj {
+            position: absolute;
+            font-size: 1px;
+            left: -1000;
+            cursor: pointer;
+        }
+        
+        .chi {
+            position: absolute;
+            cursor: pointer;
+            font-family: verdana;
+        }
+    </style>
+
+    <script type="text/javascript">
+        <!--
+
+
+        ////////////////////////////////////////////////////////////////////
+        // ================ MENU CONTENT ===================================
+
+        HDM = [
+
+            ['SAURISCHIANS', 'THEROPODS<br>Bipedal<br>predators', 'Herrerasauria', 'Saltopodidae', 'Saltopus'],
+            ['', '', '', '', 'Eoraptor'],
+            ['', '', '', 'Staurikosaurus', ''],
+            ['', '', '', 'Herrerasaurus', ''],
+            ['', '', 'Ceratosauria', 'Coelophysids', 'Coelophysis'],
+            ['', '', '', '', 'Saltopus'],
+            ['', '', '', 'Ceratosaurus', ''],
+            ['', '', '', 'Podokesaurus', ''],
+            ['', '', '', 'Abelisaurids', 'Abelisaurus'],
+            ['', '', '', '', 'Indosaurus'],
+            ['', '', '', 'Noasaurus', ''],
+            ['', '', '', 'Segisauridae', 'Segisaurus'],
+            ['', '', '', '', 'Dilophosaurus'],
+            ['', '', 'Coelurosauria', 'Coelurids', 'Coelurus'],
+            ['', '', '', '', 'Ornitholestes'],
+            ['', '', '', 'Dryptosaurus', ''],
+            ['', '', '', 'Compsognathus', ''],
+            ['', '', '', 'Oviraptor', ''],
+            ['', '', '', 'Caenagnathids', 'Caenagnathus'],
+            ['', '', '', '', 'Microvenator'],
+            ['', '', '', 'Avimimus', ''],
+            ['', '', '', 'Ornithomimus', ''],
+            ['', '', '', 'Garudimimids', 'Garudimimus'],
+            ['', '', '', '', 'Harpymimus'],
+            ['', '', '', 'Deinocheirus', ''],
+            ['', '', '', 'Dromaeosaurids', 'Caudipteryx'],
+            ['', '', '', '', 'Deinonychus'],
+            ['', '', '', '', 'Dromaeosaurus'],
+            ['', '', '', '', 'Protarchaeopteryx'],
+            ['', '', '', '', 'Sinornithosaurus'],
+            ['', '', '', '', 'Sinosauropteryx'],
+            ['', '', '', '', 'Unenlagia'],
+            ['', '', '', '', 'Utahraptor'],
+            ['', '', '', '', 'Velociraptor'],
+            ['', '', '', 'Tyrannosaurids', 'Tyrannosaurus'],
+            ['', '', '', '', 'Albertosaurus'],
+            ['', '', '', '', 'Nanotyrannus'],
+            ['', '', 'Carnosauria', 'Allosaurids', 'Allosaurus'],
+            ['', '', '', '', 'Yangchuanosaurus'],
+            ['', '', '', 'Carcharodontosaurids', 'Carcharodontosaurus'],
+            ['', '', '', '', 'Giganotosaurus'],
+            ['', '', '', 'Spinosaurus', ''],
+            ['', '', '', 'Baryonyx', ''],
+            ['', '', '', 'Megalosaurids', 'Megalosaurus'],
+            ['', '', '', '', 'Altispinax'],
+            ['', '', '', '', 'Erectopus'],
+            ['', '', 'Segnosauria', 'Therizinosaurus', ''],
+            ['', '', '', 'Segnosaurus', ''],
+            ['', 'SAUROPODS<br>Quadrupedal<br>herbivorous', 'Prosauropoda', 'Anchisaurus', ''],
+            ['', '', '', 'Plateosaurus', ''],
+            ['', '', '', 'Melanorosaurus', ''],
+            ['', '', '', 'Massospondylus', ''],
+            ['', '', 'Sauropoda', 'Cetiosaurus', ''],
+            ['', '', '', 'Camarasaurus', ''],
+            ['', '', '', 'Dicraeosaurids', 'Amargasaurus'],
+            ['', '', '', '', 'Dicraeosaurus'],
+            ['', '', '', '', 'Rebbachisaurus'],
+            ['', '', '', 'Euhelopodus', ''],
+            ['', '', '', 'Titanosaurids', 'Aegyptosaurus'],
+            ['', '', '', '', 'Alamosaurus'],
+            ['', '', '', '', 'Andesaurus'],
+            ['', '', '', '', 'Argentinosaurus'],
+            ['', '', '', '', 'Hypselosaurus'],
+            ['', '', '', '', 'Quaesitosaurus'],
+            ['', '', '', '', 'Saltasaurus'],
+            ['', '', '', '', 'Titanosaurus'],
+            ['', '', '', 'Diplodocids', 'Diplodocus'],
+            ['', '', '', '', 'Apatosaurus'],
+            ['', '', '', '', 'Barosaurus'],
+            ['', '', '', '', 'Supersaurus'],
+            ['', '', '', '', 'Seismosaurus'],
+            ['', '', '', 'Brachiosaurids', 'Astrodon'],
+            ['', '', '', '', 'Brachiosaurus'],
+            ['', '', '', '', 'Ultrasauros'],
+            ['ORNITHISCHIANS', 'ORNITHOPODS<br>herbivorous', 'Fabrosauria', 'Fabrosaurids', 'Fabrosaurus'],
+            ['', '', '', '', 'Lesothosaurus'],
+            ['', '', '', '', 'Xiaosaurus'],
+            ['', '', '', 'Heterodontosaurus', ''],
+            ['', '', 'Ornithopoda', 'Hypsilophodon', ''],
+            ['', '', '', 'Dryosaurus', ''],
+            ['', '', '', 'Iguanodontids', 'Iguanodon'],
+            ['', '', '', '', 'Ouranosaurus'],
+            ['', '', '', '', 'Anoplosaurus'],
+            ['', '', '', 'Camptosaurus', ''],
+            ['', '', '', 'Hadrosaurids', 'Hadrosaurus'],
+            ['', '', '', '', 'Maiasaura'],
+            ['', '', '', '', 'Anatotitan'],
+            ['', '', '', '', 'Edmontosaurus'],
+            ['', '', '', '', 'Saurolophus'],
+            ['', '', '', '', 'Trachodon'],
+            ['', '', '', 'Lambeosaurids', 'Lambeosaurus'],
+            ['', '', '', '', 'Bactrosaurus'],
+            ['', '', '', '', 'Corythosaurus'],
+            ['', '', '', '', 'Jaxartosaurus'],
+            ['', '', '', '', 'Parasaurolophus'],
+            ['', '', '', 'Thescelosaurus', ''],
+            ['', 'MARGINOCEPHALIA<br>herbivorous', 'Pachycephalosauria', 'Pachycephalosaurids', 'Pachycephalosaurus'],
+            ['', '', '', '', 'Stegoceras'],
+            ['', '', '', '', 'Stygimoloch'],
+            ['', '', '', 'Vannanosorus', ''],
+            ['', '', 'Ceratopsia', 'Protoceratopsids', 'Protoceratops'],
+            ['', '', '', '', 'Bagaceratops'],
+            ['', '', '', '', 'Leptoceratops'],
+            ['', '', '', '', 'Montanoceratops'],
+            ['', '', '', '', 'Notoceratops'],
+            ['', '', '', '', 'Zuniceratops'],
+            ['', '', '', 'Ceratopsidae', 'Anchiceratops'],
+            ['', '', '', '', 'Avaceratops'],
+            ['', '', '', '', 'Arrhinoceratops'],
+            ['', '', '', '', 'Brachyceratops'],
+            ['', '', '', '', 'Ceratops'],
+            ['', '', '', '', 'Monoclonius'],
+            ['', '', '', '', 'Styracosaurus'],
+            ['', '', '', '', 'Torosaurus'],
+            ['', '', '', '', 'Triceratops'],
+            ['', '', '', 'Psittacosaurus', ''],
+            ['', 'THYREOPHORA<br>armored<br>quadrupeds', 'Scriptosoria', 'ObjectOrientus', 'MPietrus'],
+            ['', '', '', '', 'G1Dootus', 'http://www.dhteumeuleu.com'],
+            ['', '', '', '', 'Evolvus'],
+            ['', '', '', 'Bizarrus', 'CybZarbius'],
+            ['', '', '', '', 'JackFlashus'],
+            ['', '', '', '', 'JimmyBeamus'],
+            ['', '', 'Stegosauria', 'Huayangosaurus', ''],
+            ['', '', '', 'Stegosaurinae', 'Stegosaurus'],
+            ['', '', '', '', 'Dacentrurus'],
+            ['', '', '', '', 'Kentrosaurus'],
+            ['', '', '', '', 'Tuojiangosaurus'],
+            ['', '', '', '', 'Yingshanosaurus'],
+            ['', '', '', 'Craterosaurus', ''],
+            ['', '', 'Ankylosauria', 'Nodosaurids', 'Nodosaurus'],
+            ['', '', '', '', 'Acanthopholis'],
+            ['', '', '', '', 'Brachyspondosaurus'],
+            ['', '', '', '', 'Edmontonia'],
+            ['', '', '', '', 'Hoplitosaurus'],
+            ['', '', '', '', 'Minmi'],
+            ['', '', '', '', 'Hylaeosaurus'],
+            ['', '', '', '', 'Polacanthus'],
+            ['', '', '', '', 'Sauropelta'],
+            ['', '', '', '', 'Struthiosaurus'],
+            ['', '', '', 'Ankylosaurus', '']
+        ];
+
+
+
+
+
+        // ============================================================
+        //     ========== Experimental GALACTIC Menu =============
+        // SCRIPT by Gerard Ferrandez - Ge-1-doot - NOV 2001
+        // ============================================================
+
+        // -------- global var --------------
+        var nx;
+        var ny;
+        var xm = 0;
+        var ym = 0;
+        var nx2;
+        var ny2;
+        var cir;
+        var E;
+        var m;
+        var HP = 0;
+        var HS = new Array();
+        // ===============================
+        var A = .0044; // rotation speed
+        var Cselected = "#FF0000";
+        var Cnode = "#00FF00";
+        var Chyperlink = "#FFFF00";
+        var Cparent = "#0000FF";
+        // ===============================
+        var cA = Math.cos(A);
+        var sA = Math.sin(A);
+        var Zoom = 0;
+        var ZoomF = 1;
+        var Xd = 0;
+        var Yd = 0;
+        var XdF = 0;
+        var YdF = 0;
+        var oB;
+        var root;
+        var tempx = 0;
+        var tempy = 0;
+        var drag = false;
+        var hcli = false;
+        // ------------------- main loop ------------------------------------------------------
+        function main() {
+            if (XdF >= Xd) Xd -= (Xd - XdF) * .1;
+            else Xd += (XdF - Xd) * .1;
+            if (YdF >= Yd) Yd -= (Yd - YdF) * .1;
+            else Yd += (YdF - Yd) * .1;
+            if (ZoomF > Zoom) Zoom -= (Zoom - ZoomF) * .05;
+            else Zoom += (ZoomF - Zoom) * .05;
+            m.rotate();
+            cir.left = oB.obj.pL - E - 3;
+            cir.top = oB.obj.pT - E - 3;
+            setTimeout(main, 16);
+        }
+        // ------------------------------------------------------------------------------------
+        function SFMenu(label, parent) {
+            // ======== create Elements =========
+            obj = document.createElement("div");
+            obj.className = "obj";
+            chi = document.createElement("div");
+            chi.className = "chi";
+            chi.innerHTML = "    " + label
+            obj.appendChild(chi);
+            document.body.appendChild(obj);
+            // ======== Attributes ============
+            this.ref = obj;
+            this.doot = obj.style;
+            this.ola = chi.style;
+            this.ref.obj = this;
+            this.parent = parent;
+            this.inscr = true;
+            this.visible = true;
+            this.pL = 0;
+            this.pT = 0;
+            this.m = new Array();
+            this.X = 0;
+            this.Y = 0;
+            this.lev = 0;
+            this.w = 0;
+            this.label = label;
+            // ==================== functions ==========================
+            // ------- children creation -------
+            this.dot = function(c) {
+                    this.m[this.m.length] = newItem = new SFMenu(c, this);
+                    newItem.lev = this.lev + 1;
+                    return newItem;
+                }
+                // ------- click Event ------------
+            this.ref.onmousedown = function() {
+                    hcli = true;
+                    with(this.obj) {
+                        if (m[0]) {
+                            url = m[0].label;
+                            if (url.indexOf("http") >= 0) {
+                                window.open(url, "_blank");
+                            } else {
+                                HS[HP++] = parent;
+                                oB = this;
+                                Mdoot(root, true);
+                                Mdoot(this.obj, false);
+                                XdF = X;
+                                YdF = Y;
+                                ZoomF = m[0].lev;
+                            }
+                        }
+                    }
+                    return false;
+                }
+                // --------- Rotation ------------
+            this.rotate = function() {
+                with(this) {
+                    // --- look Ma! no hands! ---
+                    Ax = X - Xd;
+                    Ay = Y - Yd;
+                    X = Ax * cA - Ay * sA + Xd;
+                    Y = Ay * cA + Ax * sA + Yd;
+                    // ---- children rotation ------
+                    for (var i = 0 in m) m[i].rotate();
+                    // --- exclude invisible dots
+                    if (visible) {
+                        pL = Zoom * (X - Xd) + nx2;
+                        pT = Zoom * (Y - Yd) + ny2;
+                        if (pL < 0 || pL > nx || pT < 0 || pT > ny) {
+                            if (inscr) {
+                                inscr = false;
+                                doot.left = -1E4;
+                                return;
+                            }
+                        } else inscr = true;
+                        // --- move doots
+                        if (inscr) {
+                            doot.left = pL - w * .25;
+                            doot.top = pT - w * .25;
+                        }
+                    }
+                }
+            }
+        }
+        // ---- transfer & colors -------------
+        function Mdoot(o, s) {
+            with(o) {
+                if (s) {
+                    // --- Graphic Attributs
+                    w = Math.max(2, Math.min(64, (12 - lev * 2) * (oB.obj.lev + 2))) * .8;
+                    doot.zIndex = 100 - lev + 1;
+                    if (w <= 8) ola.visibility = "hidden";
+                    else {
+                        ola.fontSize = w;
+                        ola.visibility = "visible";
+                    }
+                    doot.width = doot.height = w * 0.5;
+                    // --- view depth clamping
+                    if (lev < oB.obj.lev - 1 || lev > oB.obj.lev + 2) {
+                        visible = false;
+                        doot.left = -1E4;
+                    } else visible = true;
+                }
+                // --- color parent
+                if (parent)
+                    if (o == oB.obj) {
+                        parent.doot.background = Cparent;
+                        parent.ola.color = "white";
+                    }
+                    // --- color selected
+                doot.background = (s) ? "white" : Cselected;
+                if (!s) ola.color = "white";
+                // --- color children
+                for (var i = 0 in m) {
+                    with(m[i]) {
+                        doot.background = (s) ? "white" : (m[0]) ? Cnode : Chyperlink;
+                        ola.color = (s) ? "gray" : "white";
+                    }
+                    if (s) Mdoot(m[i], s);
+                }
+            }
+        }
+
+        // ---- Polar to X,Y coordinates calculation ------
+        function PoXY(o) {
+            with(o) {
+                for (var i = 0 in m) {
+                    // --- automatic angulation
+                    angle = ((30 * m[i].lev) + i * (360 / m.length)) / (180 / Math.PI);
+                    m[i].X = X + Math.cos(angle) * (E / m[i].lev);
+                    m[i].Y = Y + Math.sin(angle) * (E / m[i].lev);
+                    // -- children
+                    PoXY(m[i]);
+                }
+            }
+        }
+        // ------ anti-select -------------------
+        document.onselectstart = function() {
+                return false;
+            }
+            // -------- drag STARFIELD --------------
+        document.onmousemove = function(e) {
+            if (window.event) e = window.event;
+            xm = (e.x || e.clientX);
+            ym = (e.y || e.clientY);
+            if (drag) {
+                XdF = tempx + (nx - xm);
+                YdF = tempy + (ny - ym);
+            }
+            return false;
+        }
+        document.onmousedown = function() {
+            if (!hcli) {
+                tempx = XdF - (nx - xm);
+                tempy = YdF - (ny - ym);
+                document.body.style.cursor = "move";
+                drag = true;
+            }
+            hcli = false;
+            return false;
+        }
+        document.onmouseup = function() {
+                document.body.style.cursor = "";
+                drag = false;
+                return false;
+            }
+            // =============== generating menu ====================
+        function makeDots() {
+            nbrl = HDM.length;
+            var I = new Array();
+            for (i = 0; i < nbrl; i++) I[i] = new Array();
+            N = -1;
+            for (j = 0; j < 10; j++) {
+                for (i = 0; i < nbrl; i++) {
+                    if (j <= HDM[i].length) {
+                        if (HDM[i][j] != "")
+                            if (j == 0) N++;
+                            else if (HDM[i][j - 1] != "") N = 0;
+                        else N++;
+                        I[i][j + 1] = N;
+                    }
+                }
+                N = 0;
+            }
+            for (var i = 0 in HDM) {
+                command = "m";
+                for (var j = 0 in HDM[i]) {
+                    dot = HDM[i][j];
+                    if (dot != "") {
+                        for (k = 0; k < j; k++) command += '.m[' + (I[i][k + 1]) + ']';
+                        command += '.dot("' + dot + '")';
+                        eval(command);
+                        command = "m";
+                    }
+                }
+            }
+        }
+
+        // --- yo! zyva ! -----------
+        onload = function() {
+            m = new SFMenu("DYNOSAURS");
+            nx = document.body.offsetWidth;
+            ny = document.body.offsetHeight;
+            nx2 = nx * .5;
+            ny2 = ny * .5;
+            E = ny2 * .5;
+            makeDots();
+            PoXY(m);
+            root = m;
+            oB = m.ref;
+            cir = document.getElementById("circle").style;
+            cir.width = ny2 + 6;
+            cir.height = ny2 + 6;
+            Mdoot(m, true);
+            Mdoot(m, false);
+            main();
+        }
+
+
+        //-->
+    </script>
+</head>
+
+<body>
+
+    <img id="circle" src="http://www.lanrentuku.com/images/uppic/200803272236370.gif" style="position:absolute;left:-1000">
+
+    <div style="position:relative;font-family:verdana;color:#ccc;font-size:8pt;padding:10px;z-index:1000;">
+        Experimental hyper-object oriented Galactic Menu<br><br> INSTRUCTIONS :<br> - click the dots to navigate<br> - drag&drop to change your position<br> - lost in space? <span onClick="m.ref.onmousedown();" style="cursor:pointer;color:#FF0000;">click</span><br>        - back <span onClick="if(HP>0)HS[--HP].ref.onmousedown();" style="cursor:pointer;color:#FF0000"><<<</span><br><br>
+    </div>
+
+</body>
+
+</html>
