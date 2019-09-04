@@ -1,0 +1,92 @@
+<HTML>
+
+<head>
+    <title>划词检索测试</title>
+    <style>
+        #search_btn {
+            font-size: 16px;
+            padding: 0 15px;
+            height: 30px;
+            border: 3px solid rgba(3, 3, 3, 0.5);
+            border-radius: 2px;
+            text-align: center;
+            text-decoration: none;
+            padding: 5px;
+            color: #333;
+            background: white;
+        }
+    </style>
+    <script src="../lib/jquery.min.js"></script>
+</head>
+
+<body>
+    <input type="button" onclick="isallow()" value="关闭/打开划词搜索功能">
+    <p>techbrood is a good search engine on h5 resources.</p>
+</body>
+<script>
+    document.body.onload = adddiv;
+    document.onmousedown = recordobj;
+    document.ondblclick = dbclick;
+    document.onmouseup = showselect;
+    var srcobj, isdb = false,
+        allow = true;
+
+    function isallow() {
+        if (allow) {
+            allow = false;
+            alert('search on selection is closed');
+        } else {
+            allow = true;
+            alert('search on selection is opened');
+        }
+    }
+
+    function dbclick() {
+        isdb = true;
+    }
+
+    function recordobj() {
+        srcobj = event.srcElement;
+    }
+
+    function showselect() {
+        var str = "";
+        if (event.srcElement.tagName != "A" && event.srcElement.tagName != "input" && event.srcElement == srcobj && !isdb && allow) {
+            var selObj = window.getSelection(),
+                selectedText = selObj.toString(),
+                selRange = selObj.getRangeAt(0);
+            if (selectedText.length > 0) {
+                str = selectedText;
+                selectedText = "BuB" + selectedText + "EuE";
+            }
+
+            event.srcElement.innerHTML = event.srcElement.innerHTML.replace("BuB", "<u style='FONT-WEIGHT: bold;COLOR: #ff3366'>").replace("EuE", "</u>");
+        }
+        searchtd(str)
+        isdb = false;
+    }
+
+    function searchtd(str) {
+        var obj = document.getElementById("searchtd");
+        if (str.length > 0) {
+            console.log(str);
+            obj.style.display = "block";
+            obj.style.position = "absolute";
+            obj.style.zindex = 999;
+            obj.style.posTop = document.body.scrollTop + event.y - 25;
+            obj.style.posLeft = document.body.scrollLeft + event.x + 5;
+            obj.style.widht = 80;
+            obj.innerHTML = "<a id='search_btn' target=_blank href=http://techbrood.com/?q=" + str + ">Search It！</a>";
+        } else {
+            obj.style.display = "none";
+        }
+    }
+
+    function adddiv() {
+        var mobj = document.createElement("div");
+        mobj.id = "searchtd";
+        document.body.appendChild(mobj);
+    }
+</script>
+
+</HTML>
