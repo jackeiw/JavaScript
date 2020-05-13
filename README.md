@@ -1,2 +1,2 @@
-# JavaScript
-Github上面的js和HTML项目。
+# Github上面的js和HTML项目。
+JavaScript.

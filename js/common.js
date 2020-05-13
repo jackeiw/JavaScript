@@ -4,11 +4,13 @@
         alert(msg);
     };
 
-
+    v.alert = function(msg){
+        alert(msg + "loudly!")
+    }
 
     window.v = V;
-    
 })(window);
+
 
 function getTimeDiff(){
     var time = new Date();
