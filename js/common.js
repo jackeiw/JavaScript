@@ -4,7 +4,7 @@
         alert(msg);
     };
 
-    v.alert = function(msg){
+    V.alert = function(msg){
         alert(msg + "loudly!")
     }
 
@@ -13,6 +13,19 @@
 
 
 function getTimeDiff(){
+    var time = new Date();
+    console.info(time.getTime());
+}
+
+function tree(){}
+
+tree.prototype.showName = function(msg){
+    alert(msg);
+}
+
+tree.prototype.author = "jackeiw";
+
+tree.prototype.showTime = function(){
     var time = new Date();
     console.info(time.getTime());
 }
